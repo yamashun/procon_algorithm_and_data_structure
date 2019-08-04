@@ -20,15 +20,16 @@ end
 def build_g_arr(n)
   h = 1
   arr = []
-  while h < n do
+  while h <= n do
     arr.push(h)
     h = h*3 + 1
   end
   arr.reverse
 end
 
-m = n / 2
+
 g_arr = build_g_arr(n)
+m = g_arr.size
 m.times do |i|
   insert_sort(arr, n, g_arr[i])
 end
